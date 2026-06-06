@@ -1,26 +1,435 @@
 @import "tailwindcss";
 
+@theme {
+  --color-background: #fafafa;
+  --color-on-background: #1a1a1a;
+  --color-surface: #ffffff;
+  --color-surface-dim: #f0f0f0;
+  --color-surface-bright: #ffffff;
+  --color-surface-container: #f5f5f5;
+  --color-surface-container-high: #eeeeee;
+  --color-surface-container-highest: #e0e0e0;
+  --color-surface-container-low: #f8f8f8;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-variant: #e0e0e0;
+  --color-surface-tint: #1a1a1a;
+  --color-on-surface: #1a1a1a;
+  --color-on-surface-variant: #555555;
+  --color-primary: #1a1a1a;
+  --color-primary-container: #e5e5e5;
+  --color-primary-fixed: #1a1a1a;
+  --color-primary-fixed-dim: #333333;
+  --color-on-primary: #ffffff;
+  --color-on-primary-fixed: #ffffff;
+  --color-on-primary-fixed-variant: #cccccc;
+  --color-on-primary-container: #666666;
+  --color-secondary: #c44200;
+  --color-secondary-container: #ffdbd0;
+  --color-secondary-fixed: #c44200;
+  --color-secondary-fixed-dim: #c44200;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-fixed: #ffffff;
+  --color-on-secondary-fixed-variant: #832600;
+  --color-on-secondary-container: #5d1900;
+  --color-tertiary: #009745;
+  --color-tertiary-container: #c8ffd8;
+  --color-tertiary-fixed: #009745;
+  --color-tertiary-fixed-dim: #009745;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-fixed: #ffffff;
+  --color-on-tertiary-fixed-variant: #005228;
+  --color-on-tertiary-container: #003919;
+  --color-inverse-surface: #1a1a1a;
+  --color-inverse-on-surface: #f0f0f0;
+  --color-inverse-primary: #e5e5e5;
+  --color-outline: #888888;
+  --color-outline-variant: #c0c0c0;
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #410002;
+
+  --font-headline-lg-mobile: "Montserrat", sans-serif;
+  --font-label-bold: "Inter", sans-serif;
+  --font-headline-lg: "Montserrat", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-headline-md: "Montserrat", sans-serif;
+  --font-caption: "Inter", sans-serif;
+  --font-display-lg: "Montserrat", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafafa;
+  --foreground: #1a1a1a;
+  --grain-opacity: 0.02;
+  --border-color: #b0b0b0;
+  --scanline-color: rgba(0, 180, 90, 0.35);
+  --underline-color: #00b85c;
+  --ripple-bg: rgba(0, 0, 0, 0.1);
+  --glow-color: rgba(0, 180, 90, 0.25);
+  --selection-bg: #00b85c;
+  --selection-fg: #ffffff;
+  --caret-color: #00b85c;
+  --hero-bg-opacity: 0.15;
+  --about-bg-opacity: 0.08;
+  --grayscale-img-opacity: 0.85;
+  --date-text-opacity: 0.8;
+  --logo-glow: drop-shadow(0 0 8px rgba(0, 151, 69, 0.3));
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+.dark {
+  --background: #131313;
+  --foreground: #e5e2e1;
+  --grain-opacity: 0.03;
+  --border-color: #333333;
+  --scanline-color: rgba(0, 228, 121, 0.4);
+  --underline-color: #00e479;
+  --ripple-bg: rgba(255, 255, 255, 0.15);
+  --glow-color: rgba(0, 228, 121, 0.3);
+  --selection-bg: #00e479;
+  --selection-fg: #131313;
+  --caret-color: #00e479;
+  --hero-bg-opacity: 0.4;
+  --about-bg-opacity: 0.2;
+  --grayscale-img-opacity: 0.6;
+  --date-text-opacity: 0.6;
+  --logo-glow: drop-shadow(0 0 10px rgba(0, 228, 121, 0.5));
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: #131313;
+  --color-on-background: #e5e2e1;
+  --color-surface: #131313;
+  --color-surface-dim: #131313;
+  --color-surface-bright: #393939;
+  --color-surface-container: #201f1f;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-container-highest: #353534;
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-surface-variant: #353534;
+  --color-surface-tint: #c8c6c5;
+  --color-on-surface: #e5e2e1;
+  --color-on-surface-variant: #c4c7c7;
+  --color-primary: #c8c6c5;
+  --color-primary-container: #1a1a1a;
+  --color-primary-fixed: #e5e2e1;
+  --color-primary-fixed-dim: #c8c6c5;
+  --color-on-primary: #313030;
+  --color-on-primary-fixed: #1c1b1b;
+  --color-on-primary-fixed-variant: #474746;
+  --color-on-primary-container: #848282;
+  --color-secondary: #ffb59d;
+  --color-secondary-container: #b83900;
+  --color-secondary-fixed: #ffdbd0;
+  --color-secondary-fixed-dim: #ffb59d;
+  --color-on-secondary: #5d1900;
+  --color-on-secondary-fixed: #390c00;
+  --color-on-secondary-fixed-variant: #832600;
+  --color-on-secondary-container: #ffddd2;
+  --color-tertiary: #00e479;
+  --color-tertiary-container: #00200c;
+  --color-tertiary-fixed: #60ff99;
+  --color-tertiary-fixed-dim: #00e479;
+  --color-on-tertiary: #003919;
+  --color-on-tertiary-fixed: #00210c;
+  --color-on-tertiary-fixed-variant: #005228;
+  --color-on-tertiary-container: #00974e;
+  --color-inverse-surface: #e5e2e1;
+  --color-inverse-on-surface: #313030;
+  --color-inverse-primary: #5f5e5e;
+  --color-outline: #8e9192;
+  --color-outline-variant: #444748;
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+  --color-on-error: #690005;
+  --color-on-error-container: #ffdad6;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+  opacity: var(--grain-opacity);
+  pointer-events: none;
+  z-index: 100;
+}
+
+.brutalist-border {
+  border: 2px solid var(--border-color);
+}
+
+.brutalist-shadow-tertiary {
+  box-shadow: 4px 4px 0px 0px var(--color-tertiary);
+}
+
+.brutalist-shadow-secondary {
+  box-shadow: 4px 4px 0px 0px var(--color-secondary);
+}
+
+.ticker-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-move {
+  display: inline-block;
+  animation: ticker 30s linear infinite;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+::selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-fg);
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── Scroll Reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Stagger children ── */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0.05s; }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 0.12s; }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 0.19s; }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 0.26s; }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 0.33s; }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 0.40s; }
+.stagger-children.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Logo Glitch ── */
+.logo-glitch {
+  position: relative;
+  display: inline-block;
+}
+.logo-glitch::before,
+.logo-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+.logo-glitch::before {
+  color: var(--color-tertiary);
+  clip-path: inset(0 0 65% 0);
+}
+.logo-glitch::after {
+  color: var(--color-secondary);
+  clip-path: inset(65% 0 0 0);
+}
+.logo-glitch:hover::before {
+  animation: glitch-top 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.logo-glitch:hover::after {
+  animation: glitch-bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes glitch-top {
+  0%   { opacity: 0; transform: translate(0); }
+  20%  { opacity: 0.8; transform: translate(-3px, -2px); }
+  40%  { opacity: 0.8; transform: translate(3px, 1px); }
+  60%  { opacity: 0.6; transform: translate(-2px, 0px); }
+  80%  { opacity: 0.4; transform: translate(1px, 1px); }
+  100% { opacity: 0; transform: translate(0); }
+}
+@keyframes glitch-bottom {
+  0%   { opacity: 0; transform: translate(0); }
+  20%  { opacity: 0.8; transform: translate(3px, 2px); }
+  40%  { opacity: 0.8; transform: translate(-3px, -1px); }
+  60%  { opacity: 0.6; transform: translate(2px, 0px); }
+  80%  { opacity: 0.4; transform: translate(-1px, -1px); }
+  100% { opacity: 0; transform: translate(0); }
+}
+
+/* ── Hero Typewriter ── */
+.typewriter-line {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--caret-color);
+  width: 0;
+  animation: typewriter-expand 1s steps(30, end) forwards,
+             blink-caret 0.75s step-end infinite;
+  animation-delay: 0.3s;
+}
+@keyframes typewriter-expand {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50%      { border-color: var(--caret-color); }
+}
+
+/* ── Card Hover Scanline ── */
+.scanline-hover {
+  position: relative;
+  overflow: hidden;
+}
+.scanline-hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--scanline-color), transparent);
+  transform: translateY(-100%);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 10;
+}
+.scanline-hover:hover::after {
+  transform: translateY(calc(100vh));
+}
+
+/* ── Nav Link Underline Slide ── */
+.nav-link-underline {
+  position: relative;
+}
+.nav-link-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--underline-color);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link-underline:hover::after {
+  width: 100%;
+}
+
+/* ── Button Ripple ── */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+.btn-ripple::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: var(--ripple-bg);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+.btn-ripple:active::before {
+  width: 300px;
+  height: 300px;
+  opacity: 1;
+  transition: width 0s, height 0s, opacity 0s;
+}
+
+/* ── Border Glow Pulse ── */
+.border-glow:hover {
+  animation: glow-pulse 1.5s ease-in-out infinite;
+}
+@keyframes glow-pulse {
+  0%, 100% { border-color: var(--color-tertiary); box-shadow: 0 0 0px rgba(0,228,121,0); }
+  50%      { border-color: var(--color-tertiary); box-shadow: 0 0 12px var(--glow-color); }
+}
+
+/* ── Stat Counter Bounce ── */
+.stat-counter {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.stat-counter:hover {
+  transform: scale(1.08);
+}
+
+/* ── Hero Image Float ── */
+.hero-image-float {
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: rotate(2deg) translateY(0px); }
+  50%      { transform: rotate(2deg) translateY(-12px); }
+}
+
+/* ── Section Divider Slide ── */
+.divider-slide {
+  width: 0;
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.divider-slide.visible {
+  width: 48px;
+}
+
+:root .grain-overlay {
+  background-image: url("https://www.transparenttextures.com/patterns/crossword.png");
+}
+
+.brutalist-shadow-tertiary-hover:hover {
+  box-shadow: 6px 6px 0px 0px var(--color-tertiary);
+}
+
+.brutalist-shadow-secondary-hover:hover {
+  box-shadow: 6px 6px 0px 0px var(--color-secondary);
+}
+
+.brutalist-shadow-secondary-container-hover:hover {
+  box-shadow: 0 4px 0 0 var(--color-secondary-container);
+}
+
+.logo-glow {
+  filter: var(--logo-glow);
+}
+
+.hero-bg-img {
+  opacity: var(--hero-bg-opacity);
+}
+
+.about-bg-img {
+  opacity: var(--about-bg-opacity);
+}
+
+.grayscale-themed {
+  opacity: var(--grayscale-img-opacity);
 }
