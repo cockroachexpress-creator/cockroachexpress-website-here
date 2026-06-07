@@ -92,12 +92,11 @@ export default function HeroSection() {
         <div className="hidden lg:block">
           <div className="hero-image-float bg-surface-container brutalist-border p-4 brutalist-shadow-tertiary">
             <Image
-              alt="Manifesto graphic"
+              alt="Cockroach Express reporter on the field"
               className="w-full h-[450px] object-cover brutalist-border"
               width={600}
               height={450}
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWQfOj_zqAKsoBMRVDPGkUXdH_AUYq1cdXQyS5Yld7yE5NkWXsTDYFc7Iv_EE_MUVfNzxs44yXOpFMuvqJa5DMlzx71GizEQAn6n-MJaKDj_SoKUnHbliSZoli7MqU6CbFmN5T56PY8vACGdQc9_INojIhFeUuhJnSXuT_2K6nGkmsroejwDORSm90pD1AmuLwn8a7Z0bEclufNd2ov5bqgGRV8IBlGIc7K8giZU-dgqFsCaxFIlzd64hTs1Xv8VMWrSO6NzhPBwc"
-              unoptimized
+              src="/website_reporter_frame.png"
             />
             <div className="mt-4 text-center italic font-bold text-tertiary text-sm">
               &ldquo;They tried to step on us. We came back.&rdquo;
