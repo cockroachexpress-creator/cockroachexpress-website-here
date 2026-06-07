@@ -77,9 +77,8 @@ export async function fetchAndStoreNews(): Promise<Article[]> {
 
   await deleteOldArticles();
 
-  const hour = new Date().getUTCHours();
-  const categoryIndex = Math.floor(hour / 3) % CATEGORIES.length;
-  const category = CATEGORIES[categoryIndex];
+  // Run once daily — pick a random category each day
+  const category = CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)];
 
   const url = new URL(THE_NEWS_API_URL);
   url.searchParams.set("api_token", THE_NEWS_API_TOKEN);
@@ -88,6 +87,8 @@ export async function fetchAndStoreNews(): Promise<Article[]> {
   url.searchParams.set("categories", category);
   url.searchParams.set("limit", "3");
   url.searchParams.set("sort", "published_at");
+  // Always request with images
+  url.searchParams.set("include", "image");
 
   const response = await fetch(url.toString());
 
