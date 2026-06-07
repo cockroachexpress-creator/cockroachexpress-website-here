@@ -1,8 +1,8 @@
-import { getAllArticles } from "@/lib/articles";
+import { getPoliticalArticles } from "@/lib/articles";
 import TrendingGrid from "./TrendingGrid";
 
 export default async function TrendingSection() {
-  const articles = await getAllArticles();
+  const articles = await getPoliticalArticles();
 
   return (
     <section id="trending" className="px-4 md:px-12 py-20 bg-background max-w-[1200px] mx-auto">
@@ -19,7 +19,7 @@ export default async function TrendingSection() {
             lineHeight: 1.2,
           }}
         >
-          Cockroaches
+          Political Cockroaches
         </h2>
       </div>
       {articles.length === 0 ? (
@@ -28,7 +28,7 @@ export default async function TrendingSection() {
             newspaper
           </span>
           <p className="text-on-surface-variant uppercase font-bold tracking-widest text-sm">
-            Loading the latest news...
+            Loading the latest political news...
           </p>
           <p className="text-on-surface-variant text-xs mt-2">
             News auto-refreshes every 15 minutes
