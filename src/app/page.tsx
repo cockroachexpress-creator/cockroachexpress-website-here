@@ -9,6 +9,9 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import InteractiveEffects from "@/components/InteractiveEffects";
 
+// Revalidate every 60 seconds so new cron-fetched articles appear in Trending
+export const revalidate = 60;
+
 export default function Home() {
   return (
     <>
