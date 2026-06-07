@@ -77,8 +77,8 @@ export async function fetchAndStoreNews(): Promise<Article[]> {
 
   await deleteOldArticles();
 
-  // Run once daily — pick a random category each day
-  const category = CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)];
+  // Always fetch politics news
+  const category = "politics";
 
   const url = new URL(THE_NEWS_API_URL);
   url.searchParams.set("api_token", THE_NEWS_API_TOKEN);
