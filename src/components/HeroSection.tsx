@@ -20,7 +20,7 @@ export default function HeroSection() {
           src="/herobackground.jpeg"
           unoptimized
         />
-        {/* <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div> */}
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
       </div>
       <div className="relative z-10 w-full px-4 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-16">
         <div className="space-y-6">
@@ -33,7 +33,7 @@ export default function HeroSection() {
             NEWS
           </span>
           <h2
-            className="hero-text-white text-[32px] md:text-[40px] text-on-surface leading-tight"
+            className="text-[32px] md:text-[40px] text-white leading-tight"
             style={{
               fontFamily: "var(--font-montserrat)",
               fontWeight: 800,
@@ -51,7 +51,7 @@ export default function HeroSection() {
             </span>
             <br />
             <span
-              className={`text-tertiary inline-block transition-all duration-700 ${
+              className={`text-white inline-block transition-all duration-700 ${
                 mounted ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
               }`}
               style={{ transitionDelay: "0.6s" }}
@@ -60,7 +60,7 @@ export default function HeroSection() {
             </span>
           </h2>
           <p
-            className={`hero-text-white-variant text-on-surface-variant max-w-xl transition-all duration-700 ${
+            className={`text-white/90 max-w-xl transition-all duration-700 ${
               mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
             style={{ fontSize: "18px", lineHeight: 1.6, transitionDelay: "0.8s" }}
