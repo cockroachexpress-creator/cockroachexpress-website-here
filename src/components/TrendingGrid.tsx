@@ -35,7 +35,7 @@ export default function TrendingGrid({ articles }: { articles: Article[] }) {
               ? articles.length
               : articles.filter((a) => a.category === f.value).length;
 
-          if (f.value !== "ALL" && count === 0) return null;
+
 
           return (
             <button
