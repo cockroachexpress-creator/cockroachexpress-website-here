@@ -20,7 +20,7 @@ export default function HeroSection() {
           src="/herobackground.jpeg"
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div> */}
       </div>
       <div className="relative z-10 w-full px-4 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-16">
         <div className="space-y-6">
@@ -96,7 +96,7 @@ export default function HeroSection() {
                 alt="Cockroach Express reporter on the field"
                 fill
                 className="object-cover"
-                src="/website_reporter_frame.png"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWQfOj_zqAKsoBMRVDPGkUXdH_AUYq1cdXQyS5Yld7yE5NkWXsTDYFc7Iv_EE_MUVfNzxs44yXOpFMuvqJa5DMlzx71GizEQAn6n-MJaKDj_SoKUnHbliSZoli7MqU6CbFmN5T56PY8vACGdQc9_INojIhFeUuhJnSXuT_2K6nGkmsroejwDORSm90pD1AmuLwn8a7Z0bEclufNd2ov5bqgGRV8IBlGIc7K8giZU-dgqFsCaxFIlzd64hTs1Xv8VMWrSO6NzhPBwc"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>

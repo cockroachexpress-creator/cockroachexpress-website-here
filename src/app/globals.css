@@ -75,7 +75,7 @@ html {
   --selection-bg: #007a38;
   --selection-fg: #ffffff;
   --caret-color: #007a38;
-  --hero-bg-opacity: 0.12;
+  --hero-bg-opacity: 1;
   --about-bg-opacity: 0.06;
   --grayscale-img-opacity: 0.85;
   --date-text-opacity: 0.8;
@@ -454,6 +454,11 @@ body {
 
 :root:not(.dark) .scanline-hover::after {
   background: linear-gradient(90deg, transparent, rgba(0, 122, 56, 0.25), transparent);
+}
+
+/* Hide white gradient overlay on hero bg in light mode */
+:root:not(.dark) .hero-gradient {
+  display: none;
 }
 
 :root:not(.dark) .border-glow:hover {
