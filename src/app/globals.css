@@ -461,6 +461,14 @@ body {
   display: none;
 }
 
+/* White text on hero in light mode (image bg needs light text) */
+:root:not(.dark) .hero-text-white {
+  color: #ffffff !important;
+}
+:root:not(.dark) .hero-text-white-variant {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
 :root:not(.dark) .border-glow:hover {
   animation: glow-pulse-light 1.5s ease-in-out infinite;
 }

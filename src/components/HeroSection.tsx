@@ -33,7 +33,7 @@ export default function HeroSection() {
             NEWS
           </span>
           <h2
-            className="text-[32px] md:text-[40px] text-on-surface leading-tight"
+            className="hero-text-white text-[32px] md:text-[40px] text-on-surface leading-tight"
             style={{
               fontFamily: "var(--font-montserrat)",
               fontWeight: 800,
@@ -60,7 +60,7 @@ export default function HeroSection() {
             </span>
           </h2>
           <p
-            className={`text-on-surface-variant max-w-xl transition-all duration-700 ${
+            className={`hero-text-white-variant text-on-surface-variant max-w-xl transition-all duration-700 ${
               mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
             style={{ fontSize: "18px", lineHeight: 1.6, transitionDelay: "0.8s" }}
