@@ -55,11 +55,11 @@ export default function Footer() {
   return (
     <footer
       ref={ref}
-      className="w-full px-4 md:px-12 py-12 flex flex-col md:flex-row justify-between items-start gap-6 bg-surface-container-lowest border-t-4 border-secondary-container"
+      className="w-full px-4 md:px-12 py-8 md:py-12 flex flex-col md:flex-row justify-between items-start gap-6 md:gap-8 bg-surface-container-lowest border-t-4 border-secondary-container"
     >
-      <div className="space-y-4 max-w-xs reveal">
+      <div className="space-y-3 md:space-y-4 max-w-xs reveal">
         <h2
-          className="text-[24px] font-black text-secondary uppercase leading-none"
+          className="text-[20px] md:text-[24px] font-black text-secondary uppercase leading-none"
           style={{
             fontFamily: "var(--font-montserrat)",
             fontWeight: 700,
@@ -109,7 +109,7 @@ export default function Footer() {
         <h4 className="text-secondary uppercase tracking-widest text-[10px] font-bold">
           FOLLOW THE COCKROACHES
         </h4>
-        <div className="flex gap-4">
+        <div className="flex gap-3 md:gap-4">
           {socialLinks.map((social, i) => (
             <Link
               key={social.aria}

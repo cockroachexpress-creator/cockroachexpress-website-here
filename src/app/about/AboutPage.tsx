@@ -156,9 +156,9 @@ export default function AboutPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/60" />
           </div>
-          <div className="relative z-10 max-w-[900px] mx-auto px-4 md:px-12 py-24 md:py-32 text-center">
+          <div className="relative z-10 max-w-[900px] mx-auto px-4 md:px-12 py-16 md:py-24 lg:py-32 text-center">
             <span
-              className={`inline-block bg-secondary-container text-on-secondary-container px-4 py-1 text-[11px] uppercase tracking-widest font-bold mb-8 transition-all duration-700 ${
+              className={`inline-block bg-secondary-container text-on-secondary-container px-4 py-1 text-[10px] sm:text-[11px] uppercase tracking-widest font-bold mb-6 md:mb-8 transition-all duration-700 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
               }`}
               style={{ transitionDelay: "0.1s" }}
@@ -166,7 +166,7 @@ export default function AboutPage() {
               About Us
             </span>
             <h1
-              className={`text-[32px] md:text-[56px] text-on-surface leading-none mb-6 transition-all duration-700 ${
+              className={`text-[28px] sm:text-[32px] md:text-[56px] text-on-surface leading-none mb-4 md:mb-6 transition-all duration-700 ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{
@@ -181,10 +181,10 @@ export default function AboutPage() {
               THE <span className="text-tertiary italic">COCKROACH.</span>
             </h1>
             <p
-              className={`text-on-surface-variant max-w-2xl mx-auto transition-all duration-700 ${
+              className={`text-on-surface-variant max-w-2xl mx-auto transition-all duration-700 text-sm md:text-[18px] ${
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
-              style={{ fontSize: "18px", lineHeight: 1.6, transitionDelay: "0.5s" }}
+              style={{ lineHeight: 1.6, transitionDelay: "0.5s" }}
             >
               When the Chief Justice of India compared unemployed youth to
               &ldquo;parasitic cockroaches,&rdquo; he meant it as an insult.
@@ -195,14 +195,14 @@ export default function AboutPage() {
         </section>
 
         {/* The Origin Story */}
-        <section className="max-w-[900px] mx-auto px-4 md:px-12 py-20">
-          <div className="flex items-center gap-4 mb-12">
+        <section className="max-w-[900px] mx-auto px-4 md:px-12 py-12 md:py-20">
+          <div className="flex items-center gap-4 mb-8 md:mb-12">
             <div className="h-0.5 w-12 bg-tertiary"></div>
             <span className="text-tertiary uppercase tracking-widest text-xs font-bold">
               THE ORIGIN STORY
             </span>
           </div>
-          <div className="space-y-6 text-on-surface-variant" style={{ fontSize: "17px", lineHeight: 1.8 }}>
+          <div className="space-y-4 md:space-y-6 text-on-surface-variant text-sm md:text-[17px]" style={{ lineHeight: 1.8 }}>
             <p>
               It started, like most revolutions do, with a tweet. Someone in a position
               of immense authority — a Chief Justice, no less — decided that the best
@@ -249,13 +249,13 @@ export default function AboutPage() {
         </section>
 
         {/* Vision & Mission */}
-        <section className="bg-surface-container-lowest py-20 border-y-2 border-surface-container-highest">
-          <div className="max-w-[1200px] mx-auto px-4 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-surface-container p-8 md:p-10 brutalist-border brutalist-shadow-tertiary hover:translate-x-[-2px] hover:translate-y-[-2px] brutalist-shadow-tertiary-hover transition-all duration-200">
-              <div className="flex items-center gap-4 mb-6">
-                <span className="material-symbols-outlined text-tertiary text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>visibility</span>
+        <section className="bg-surface-container-lowest py-12 md:py-20 border-y-2 border-surface-container-highest">
+          <div className="max-w-[1200px] mx-auto px-4 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="bg-surface-container p-6 md:p-10 brutalist-border brutalist-shadow-tertiary hover:translate-x-[-2px] hover:translate-y-[-2px] brutalist-shadow-tertiary-hover transition-all duration-200">
+              <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6">
+                <span className="material-symbols-outlined text-tertiary text-3xl md:text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>visibility</span>
                 <div>
-                  <h3 className="text-on-surface" style={{ fontFamily: "var(--font-montserrat)", fontWeight: 700, fontSize: "24px", lineHeight: 1.3 }}>
+                  <h3 className="text-on-surface" style={{ fontFamily: "var(--font-montserrat)", fontWeight: 700, fontSize: "clamp(18px, 2.5vw, 24px)", lineHeight: 1.3 }}>
                     Our Vision
                   </h3>
                   <p className="text-tertiary uppercase tracking-widest text-xs font-bold">
@@ -263,7 +263,7 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              <p className="text-on-surface-variant mb-6" style={{ lineHeight: 1.7 }}>
+              <p className="text-on-surface-variant mb-4 md:mb-6 text-sm md:text-base" style={{ lineHeight: 1.7 }}>
                 We envision a media landscape where power is unapologetically held to
                 account. Where &ldquo;strategic spending&rdquo; is called what it is —
                 corruption. Where &ldquo;youth engagement&rdquo; doesn&apos;t mean
@@ -275,11 +275,11 @@ export default function AboutPage() {
                 &ldquo;Where did the money go?&rdquo;
               </div>
             </div>
-            <div className="bg-surface-container p-8 md:p-10 brutalist-border brutalist-shadow-secondary hover:translate-x-[-2px] hover:translate-y-[-2px] brutalist-shadow-secondary-hover transition-all duration-200">
-              <div className="flex items-center gap-4 mb-6">
-                <span className="material-symbols-outlined text-secondary text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>rocket_launch</span>
+            <div className="bg-surface-container p-6 md:p-10 brutalist-border brutalist-shadow-secondary hover:translate-x-[-2px] hover:translate-y-[-2px] brutalist-shadow-secondary-hover transition-all duration-200">
+              <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6">
+                <span className="material-symbols-outlined text-secondary text-3xl md:text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>rocket_launch</span>
                 <div>
-                  <h3 className="text-on-surface" style={{ fontFamily: "var(--font-montserrat)", fontWeight: 700, fontSize: "24px", lineHeight: 1.3 }}>
+                  <h3 className="text-on-surface" style={{ fontFamily: "var(--font-montserrat)", fontWeight: 700, fontSize: "clamp(18px, 2.5vw, 24px)", lineHeight: 1.3 }}>
                     Our Mission
                   </h3>
                   <p className="text-secondary uppercase tracking-widest text-xs font-bold">
@@ -287,7 +287,7 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              <p className="text-on-surface-variant mb-6" style={{ lineHeight: 1.7 }}>
+              <p className="text-on-surface-variant mb-4 md:mb-6 text-sm md:text-base" style={{ lineHeight: 1.7 }}>
                 Our mission is to build an un-ignorable digital platform for the young
                 people who have been dismissed as lazy, chronically online, or treated
                 as political afterthoughts. We are reclaiming the insults thrown at our
@@ -302,15 +302,15 @@ export default function AboutPage() {
         </section>
 
         {/* Our Values */}
-        <section className="max-w-[1200px] mx-auto px-4 md:px-12 py-20">
-          <div className="flex items-center gap-4 mb-12">
+        <section className="max-w-[1200px] mx-auto px-4 md:px-12 py-12 md:py-20">
+          <div className="flex items-center gap-4 mb-8 md:mb-12">
             <div className="h-0.5 w-12 bg-secondary"></div>
             <span className="text-secondary uppercase tracking-widest text-xs font-bold">
               WHAT WE STAND FOR
             </span>
           </div>
           <h2
-            className="text-[32px] md:text-[40px] text-on-surface uppercase mb-12"
+              className="text-[26px] sm:text-[32px] md:text-[40px] text-on-surface uppercase mb-8 md:mb-12"
             style={{ fontFamily: "var(--font-montserrat)", fontWeight: 800, letterSpacing: "-0.02em", lineHeight: 1.2 }}
           >
             Our <span className="text-tertiary">Values</span>
@@ -333,16 +333,16 @@ export default function AboutPage() {
         </section>
 
         {/* Timeline */}
-        <section className="bg-surface-container-lowest py-20 border-y-2 border-surface-container-highest">
+        <section className="bg-surface-container-lowest py-12 md:py-20 border-y-2 border-surface-container-highest">
           <div className="max-w-[900px] mx-auto px-4 md:px-12">
-            <div className="flex items-center gap-4 mb-12">
+            <div className="flex items-center gap-4 mb-8 md:mb-12">
               <div className="h-0.5 w-12 bg-tertiary"></div>
               <span className="text-tertiary uppercase tracking-widest text-xs font-bold">
                 THE JOURNEY
               </span>
             </div>
             <h2
-              className="text-[32px] md:text-[40px] text-on-surface uppercase mb-16"
+              className="text-[26px] sm:text-[32px] md:text-[40px] text-on-surface uppercase mb-10 md:mb-16"
               style={{ fontFamily: "var(--font-montserrat)", fontWeight: 800, letterSpacing: "-0.02em", lineHeight: 1.2 }}
             >
               A Brief <span className="text-secondary">History</span>
@@ -372,30 +372,30 @@ export default function AboutPage() {
         </section>
 
         {/* Stats */}
-        <section className="max-w-[900px] mx-auto px-4 md:px-12 py-20">
+        <section className="max-w-[900px] mx-auto px-4 md:px-12 py-12 md:py-20">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {stats.map((stat) => (
               <div key={stat.label} className="stat-counter bg-surface-container p-8 text-center brutalist-border border-outline hover:border-tertiary transition-all duration-200">
-                <p className={`text-[32px] mb-1 ${stat.color}`} style={{ fontFamily: "var(--font-montserrat)", fontWeight: 900 }}>
+                <p className={`text-[24px] md:text-[32px] mb-1 ${stat.color}`} style={{ fontFamily: "var(--font-montserrat)", fontWeight: 900 }}>
                   {stat.value}
                 </p>
-                <p className="text-on-surface-variant uppercase text-[10px] tracking-tighter font-bold">{stat.label}</p>
+                <p className="text-on-surface-variant uppercase text-[9px] md:text-[10px] tracking-tighter font-bold">{stat.label}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* Team */}
-        <section className="bg-surface-container-lowest py-20 border-y-2 border-surface-container-highest">
+        <section className="bg-surface-container-lowest py-12 md:py-20 border-y-2 border-surface-container-highest">
           <div className="max-w-[1200px] mx-auto px-4 md:px-12">
-            <div className="flex items-center gap-4 mb-12">
+            <div className="flex items-center gap-4 mb-8 md:mb-12">
               <div className="h-0.5 w-12 bg-secondary"></div>
               <span className="text-secondary uppercase tracking-widest text-xs font-bold">
                 THE RESISTANCE
               </span>
             </div>
             <h2
-              className="text-[32px] md:text-[40px] text-on-surface uppercase mb-12"
+            className="text-[26px] sm:text-[32px] md:text-[40px] text-on-surface uppercase mb-8 md:mb-12"
               style={{ fontFamily: "var(--font-montserrat)", fontWeight: 800, letterSpacing: "-0.02em", lineHeight: 1.2 }}
             >
               Meet the <span className="text-secondary">Cockroaches</span>
@@ -425,16 +425,16 @@ export default function AboutPage() {
         </section>
 
         {/* Manifesto Quote */}
-        <section className="py-24">
+        <section className="py-16 md:py-24">
           <div className="max-w-[800px] mx-auto px-4 md:px-12 text-center">
-            <span className="material-symbols-outlined text-secondary text-4xl mb-6 inline-block">auto_stories</span>
+            <span className="material-symbols-outlined text-secondary text-3xl md:text-4xl mb-4 md:mb-6 inline-block">auto_stories</span>
             <h2
-              className="text-[28px] md:text-[40px] text-on-surface uppercase mb-8 italic"
+              className="text-[24px] sm:text-[28px] md:text-[40px] text-on-surface uppercase mb-6 md:mb-8 italic"
               style={{ fontFamily: "var(--font-montserrat)", fontWeight: 800, letterSpacing: "-0.02em", lineHeight: 1.2 }}
             >
               The News That <span className="text-tertiary">Won&apos;t Die.</span>
             </h2>
-            <p className="text-on-surface-variant mx-auto mb-8" style={{ fontSize: "18px", lineHeight: 1.6 }}>
+            <p className="text-on-surface-variant mx-auto mb-6 md:mb-8 text-sm md:text-[18px]" style={{ lineHeight: 1.6 }}>
               We don&apos;t walk on eggshells. We crawl straight through the cracks to
               uncover the raw, unfiltered truth. Mainstream media might dismiss our
               generation, but Cockroach Express is built to be resilient, highly
@@ -443,7 +443,7 @@ export default function AboutPage() {
             <div className="relative group overflow-hidden brutalist-border brutalist-shadow-tertiary inline-block">
               <Image
                 alt="Gritty office terminal environment"
-                className="w-full max-w-[600px] h-64 object-cover grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700 grayscale-themed"
+                className="w-full max-w-[600px] h-48 md:h-64 object-cover grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700 grayscale-themed"
                 width={600}
                 height={256}
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdwCpMvEy8kRV17jZXuICBC3uDk8BiJIatzzs_FsHWYUep_2fQr5FkMr0qTWRnrogANjtjg-9Qb9EpIRzDHJ_Q0ofJ8y8eD6FcW6eIETK9HLhkbw9u-PUaMiC9dG4OsD9aZobWQDYanBIPMjW7etKOrRuRlTfMXWEbTPSWstq878gcGTX5u1cYHEgzMcd8WQY_wBIPQfG8zCECR8X-tQ_TEtWJe-5bLqJVHenX6k8JCvyggiVBUrhmOEKhFqAG5LbSwn7-Juw7MMo"

@@ -14,7 +14,7 @@ export default function TrendingGrid({ articles }: { articles: Article[] }) {
           className="block"
         >
           <article className="scanline-hover border-glow bg-surface-container-low brutalist-border hover:border-tertiary transition-colors group h-full">
-            <div className="relative h-64 overflow-hidden border-b-2 border-surface-container-highest">
+            <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden border-b-2 border-surface-container-highest">
               <Image
                 alt={article.imageAlt}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -27,31 +27,31 @@ export default function TrendingGrid({ articles }: { articles: Article[] }) {
                 {article.category}
               </span>
             </div>
-            <div className="p-6 space-y-4">
+            <div className="p-4 md:p-6 space-y-3 md:space-y-4">
               <h3
                 className="text-on-surface leading-tight group-hover:text-tertiary transition-colors"
                 style={{
                   fontFamily: "var(--font-montserrat)",
                   fontWeight: 700,
-                  fontSize: "24px",
+                  fontSize: "clamp(18px, 2.5vw, 24px)",
                   lineHeight: 1.3,
                 }}
               >
                 {article.title}
               </h3>
-              <p className="text-on-surface-variant line-clamp-2">
+              <p className="text-on-surface-variant text-sm line-clamp-2">
                 {article.description}
               </p>
-              <div className="flex items-center justify-between pt-4 border-t border-surface-container-highest">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-tertiary flex items-center justify-center text-surface font-black text-sm transition-transform duration-200 group-hover:scale-110 group-hover:rotate-12">
+              <div className="flex items-center justify-between pt-3 md:pt-4 border-t border-surface-container-highest">
+                <div className="flex items-center gap-2 md:gap-3">
+                  <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-tertiary flex items-center justify-center text-surface font-black text-xs md:text-sm transition-transform duration-200 group-hover:scale-110 group-hover:rotate-12">
                     {article.authorInitials}
                   </div>
                   <div>
-                    <p className="text-on-surface font-bold text-xs">
+                    <p className="text-on-surface font-bold text-[10px] md:text-xs">
                       {article.author}
                     </p>
-                    <p className="text-[10px] text-on-surface-variant uppercase">
+                    <p className="text-[9px] md:text-[10px] text-on-surface-variant uppercase">
                       {article.date}
                     </p>
                   </div>

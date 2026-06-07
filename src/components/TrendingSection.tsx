@@ -5,13 +5,13 @@ export default async function TrendingSection() {
   const articles = await getPoliticalArticles();
 
   return (
-    <section id="trending" className="px-4 md:px-12 py-20 bg-background max-w-[1200px] mx-auto">
-      <div className="mb-12">
-        <span className="text-secondary uppercase tracking-widest block mb-2 font-bold text-sm">
+    <section id="trending" className="px-4 md:px-12 py-12 md:py-20 bg-background max-w-[1200px] mx-auto">
+      <div className="mb-8 md:mb-12">
+        <span className="text-secondary uppercase tracking-widest block mb-2 font-bold text-xs md:text-sm">
           — TRENDING
         </span>
         <h2
-          className="text-[32px] md:text-[40px] text-on-surface uppercase"
+          className="text-[26px] sm:text-[32px] md:text-[40px] text-on-surface uppercase"
           style={{
             fontFamily: "var(--font-montserrat)",
             fontWeight: 800,

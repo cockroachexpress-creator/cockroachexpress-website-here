@@ -44,7 +44,7 @@ export default function ArticleDetail({ article, allArticles }: { article: Artic
         </button>
       </nav>
 
-      <main className="max-w-[900px] mx-auto px-4 md:px-12 py-12 md:py-20">
+      <main className="max-w-[900px] mx-auto px-4 md:px-12 py-8 md:py-12 lg:py-20">
         <div
           className={`transition-all duration-700 ${
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -60,7 +60,7 @@ export default function ArticleDetail({ article, allArticles }: { article: Artic
           </div>
 
           <h1
-            className="text-[28px] md:text-[48px] text-on-surface leading-tight mb-8"
+            className="text-[24px] sm:text-[28px] md:text-[48px] text-on-surface leading-tight mb-6 md:mb-8"
             style={{
               fontFamily: "var(--font-montserrat)",
               fontWeight: 900,
@@ -71,7 +71,7 @@ export default function ArticleDetail({ article, allArticles }: { article: Artic
             {article.title}
           </h1>
 
-          <div className="flex items-center gap-4 mb-10 pb-8 border-b border-surface-container-highest">
+          <div className="flex items-center gap-4 mb-8 md:mb-10 pb-6 md:pb-8 border-b border-surface-container-highest">
             <div className="w-10 h-10 rounded-full bg-tertiary flex items-center justify-center text-surface font-black text-sm">
               {article.authorInitials}
             </div>
@@ -93,7 +93,7 @@ export default function ArticleDetail({ article, allArticles }: { article: Artic
           <div className="brutalist-border brutalist-shadow-tertiary p-2 bg-surface-container">
             <Image
               alt={article.imageAlt}
-              className="w-full h-[300px] md:h-[450px] object-cover"
+              className="w-full h-[220px] sm:h-[300px] md:h-[450px] object-cover"
               width={900}
               height={450}
               src={article.image}
@@ -111,7 +111,7 @@ export default function ArticleDetail({ article, allArticles }: { article: Artic
           {article.body.map((paragraph, i) => (
             <p
               key={i}
-              className="text-on-surface-variant leading-relaxed text-[17px]"
+              className="text-on-surface-variant leading-relaxed text-[15px] md:text-[17px]"
               style={{ lineHeight: 1.8 }}
             >
               {paragraph}
@@ -165,7 +165,7 @@ export default function ArticleDetail({ article, allArticles }: { article: Artic
                     <div className="flex gap-4">
                       <Image
                         alt={r.imageAlt}
-                        className="w-24 h-24 object-cover brutalist-border shrink-0 group-hover:border-tertiary transition-colors"
+                        className="w-20 h-20 md:w-24 md:h-24 object-cover brutalist-border shrink-0 group-hover:border-tertiary transition-colors"
                         width={96}
                         height={96}
                         src={r.image}

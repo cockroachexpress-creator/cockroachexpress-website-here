@@ -25,14 +25,14 @@ export default function ContactSection() {
   const ref = useScrollReveal();
 
   return (
-    <section id="contact" ref={ref} className="py-24 px-4 md:px-12 bg-background border-t-2 border-surface-container-highest">
+    <section id="contact" ref={ref} className="py-16 md:py-24 px-4 md:px-12 bg-background border-t-2 border-surface-container-highest">
       <div className="max-w-[1200px] mx-auto">
-        <div className="mb-12">
-          <span className="text-secondary uppercase tracking-widest block mb-2 font-bold text-sm reveal">
+        <div className="mb-8 md:mb-12">
+          <span className="text-secondary uppercase tracking-widest block mb-2 font-bold text-xs md:text-sm reveal">
             — CONTACT
           </span>
           <h2
-            className="text-[32px] md:text-[40px] text-on-surface uppercase reveal"
+            className="text-[26px] sm:text-[32px] md:text-[40px] text-on-surface uppercase reveal"
             style={{
               fontFamily: "var(--font-montserrat)",
               fontWeight: 800,
@@ -75,26 +75,25 @@ export default function ContactSection() {
             href="https://docs.google.com/forms/d/e/1FAIpQLScKfBc9c00arsdsPu6Tm0JChJfsu0x8ywhy0aCdc62znV7XvQ/alreadyresponded"
             target="_blank"
             rel="noopener noreferrer"
-            className="scanline-hover lg:col-span-2 brutalist-border bg-surface-container-lowest overflow-hidden flex flex-col items-center justify-center p-12 text-center min-h-[400px] group cursor-pointer hover:border-tertiary transition-colors"
+            className="scanline-hover lg:col-span-2 brutalist-border bg-surface-container-lowest overflow-hidden flex flex-col items-center justify-center p-8 md:p-12 text-center min-h-[280px] md:min-h-[400px] group cursor-pointer hover:border-tertiary transition-colors"
           >
             <span
-              className="material-symbols-outlined text-tertiary mb-6 group-hover:scale-125 transition-transform duration-300"
-              style={{ fontSize: "64px" }}
+              className="material-symbols-outlined text-tertiary mb-4 md:mb-6 group-hover:scale-125 transition-transform duration-300"
+              style={{ fontSize: "clamp(48px, 8vw, 64px)" }}
             >
               description
             </span>
             <h3
-              className="text-on-surface mb-2"
+              className="text-on-surface mb-2 text-[18px] md:text-[24px]"
               style={{
                 fontFamily: "var(--font-montserrat)",
                 fontWeight: 700,
-                fontSize: "24px",
                 lineHeight: 1.3,
               }}
             >
               Got a scoop? A hot take? A conspiracy theory?
             </h3>
-            <p className="text-on-surface-variant mb-6 max-w-md">
+            <p className="text-on-surface-variant mb-4 md:mb-6 max-w-md text-sm md:text-base">
               Fill out our tip line form and we might just turn your chaos into
               headlines.
             </p>

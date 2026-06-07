@@ -587,3 +587,35 @@ body {
     rgba(255, 255, 255, 0.9)
   );
 }
+
+/* ── Mobile Responsive Overrides ── */
+@media (max-width: 640px) {
+  .brutalist-shadow-tertiary {
+    box-shadow: 3px 3px 0px 0px var(--color-tertiary);
+  }
+  .brutalist-shadow-secondary {
+    box-shadow: 3px 3px 0px 0px var(--color-secondary);
+  }
+  .brutalist-shadow-tertiary-hover:hover {
+    box-shadow: 4px 4px 0px 0px var(--color-tertiary);
+  }
+  .brutalist-shadow-secondary-hover:hover {
+    box-shadow: 4px 4px 0px 0px var(--color-secondary);
+  }
+  .grain-overlay {
+    opacity: calc(var(--grain-opacity) * 0.5);
+  }
+}
+
+/* ── Mobile Menu ── */
+.mobile-menu-panel {
+  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.3);
+}
+
+:root:not(.dark) .mobile-menu-panel {
+  background-color: #f8f6f2;
+}
+
+:root:not(.dark) .mobile-menu-backdrop {
+  background-color: rgba(0, 0, 0, 0.4);
+}

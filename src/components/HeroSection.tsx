@@ -11,7 +11,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-[600px] flex items-center bg-surface overflow-hidden border-b-2 border-surface-container-highest">
+    <section className="relative min-h-[480px] sm:min-h-[600px] flex items-center bg-surface overflow-hidden border-b-2 border-surface-container-highest">
       <div className="absolute inset-0 z-0">
         <Image
           alt="Gritty cinematic urban background"
@@ -22,10 +22,10 @@ export default function HeroSection() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
       </div>
-      <div className="relative z-10 w-full px-4 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-16">
-        <div className="space-y-6">
+      <div className="relative z-10 w-full px-4 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center py-12 md:py-16">
+        <div className="space-y-4 md:space-y-6">
           <span
-            className={`inline-block bg-secondary text-on-secondary px-3 py-1 text-[12px] uppercase tracking-widest font-bold transition-all duration-500 ${
+            className={`inline-block bg-secondary text-on-secondary px-3 py-1 text-[10px] sm:text-[12px] uppercase tracking-widest font-bold transition-all duration-500 ${
               mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
             }`}
             style={{ transitionDelay: "0.1s" }}
@@ -33,7 +33,7 @@ export default function HeroSection() {
             NEWS
           </span>
           <h2
-            className="text-[32px] md:text-[40px] text-white leading-tight"
+            className="text-[26px] sm:text-[32px] md:text-[40px] text-white leading-tight"
             style={{
               fontFamily: "var(--font-montserrat)",
               fontWeight: 800,
@@ -47,11 +47,11 @@ export default function HeroSection() {
               }`}
               style={{ transitionDelay: "0.3s" }}
             >
-              VOICE OF YOUTH IS OUR
+              VOICE OF <span className="text-tertiary">YOUTH</span> IS OUR
             </span>
             <br />
             <span
-              className={`text-white inline-block transition-all duration-700 ${
+              className={`text-tertiary inline-block transition-all duration-700 ${
                 mounted ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
               }`}
               style={{ transitionDelay: "0.6s" }}
@@ -63,7 +63,7 @@ export default function HeroSection() {
             className={`text-white/90 max-w-xl transition-all duration-700 ${
               mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
-            style={{ fontSize: "18px", lineHeight: 1.6, transitionDelay: "0.8s" }}
+            style={{ fontSize: "clamp(14px, 2.5vw, 18px)", lineHeight: 1.6, transitionDelay: "0.8s" }}
           >
             When the mainstream media looks away, we stare back. Cockroach
             Express is the digital frontline for the resilient, the unfiltered,
@@ -78,7 +78,7 @@ export default function HeroSection() {
                 window.scrollTo({ top, behavior: "smooth" });
               }
             }}
-            className={`btn-ripple bg-secondary text-on-secondary px-8 py-4 uppercase font-bold text-sm brutalist-border brutalist-shadow-secondary flex items-center gap-2 hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all cursor-pointer ${
+            className={`btn-ripple w-full sm:w-auto bg-secondary text-on-secondary px-8 py-4 uppercase font-bold text-sm brutalist-border brutalist-shadow-secondary flex items-center justify-center sm:justify-start gap-2 hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all cursor-pointer ${
               mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
             style={{ transitionDelay: "1s" }}

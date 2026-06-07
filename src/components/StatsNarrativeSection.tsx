@@ -65,16 +65,16 @@ export default function StatsNarrativeSection() {
   const ref = useScrollReveal();
 
   return (
-    <section id="about" ref={ref} className="py-24 px-4 md:px-12 bg-surface-container-lowest overflow-hidden">
+    <section id="about" ref={ref} className="py-16 md:py-24 px-4 md:px-12 bg-surface-container-lowest overflow-hidden">
       <div className="max-w-[1200px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          <div className="lg:col-span-7 space-y-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-16 items-start">
+          <div className="lg:col-span-7 space-y-8 md:space-y-12">
             <div>
-              <span className="text-tertiary uppercase tracking-widest block mb-2 font-bold text-sm reveal">
+              <span className="text-tertiary uppercase tracking-widest block mb-2 font-bold text-xs md:text-sm reveal">
                 — ABOUT US
               </span>
               <h2
-                className="text-[32px] md:text-[40px] mb-6 uppercase reveal"
+                className="text-[26px] sm:text-[32px] md:text-[40px] mb-4 md:mb-6 uppercase reveal"
                 style={{
                   fontFamily: "var(--font-montserrat)",
                   fontWeight: 800,
@@ -84,7 +84,7 @@ export default function StatsNarrativeSection() {
               >
                 Why We Chose the <span className="text-tertiary">Name</span>
               </h2>
-              <p className="text-on-surface-variant reveal" style={{ fontSize: "18px", lineHeight: 1.6 }}>
+              <p className="text-on-surface-variant reveal text-sm md:text-[18px]" style={{ lineHeight: 1.6 }}>
                 When the Chief Justice of India compared unemployed youth to
                 &ldquo;parasitic cockroaches,&rdquo; he meant it as an insult.
                 We took it as a business plan. CockroachExpress is India&apos;s
@@ -92,11 +92,11 @@ export default function StatsNarrativeSection() {
                 unemployed, for the unemployed, powered by spite and free WiFi.
               </p>
             </div>
-            <div className="stagger-children grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="stagger-children grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
               {traits.map((trait) => (
                 <div
                   key={trait.title}
-                  className="scanline-hover p-6 border border-surface-container-highest bg-surface-container hover:border-tertiary hover:translate-y-[-2px] transition-all duration-200"
+                  className="scanline-hover p-4 md:p-6 border border-surface-container-highest bg-surface-container hover:border-tertiary hover:translate-y-[-2px] transition-all duration-200"
                 >
                   <span className="material-symbols-outlined text-tertiary mb-3 hover:scale-125 transition-transform duration-200">
                     {trait.icon}
@@ -115,15 +115,15 @@ export default function StatsNarrativeSection() {
               <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform duration-200">arrow_right_alt</span>
             </Link>
           </div>
-          <div className="lg:col-span-5 space-y-6">
-            <div className="stagger-children grid grid-cols-2 gap-4">
+          <div className="lg:col-span-5 space-y-4 md:space-y-6">
+            <div className="stagger-children grid grid-cols-2 gap-3 md:gap-4">
               {stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="stat-counter bg-surface-container p-6 text-center brutalist-border border-outline hover:border-tertiary transition-all duration-200"
+                  className="stat-counter bg-surface-container p-4 md:p-6 text-center brutalist-border border-outline hover:border-tertiary transition-all duration-200"
                 >
                   <p
-                    className={`text-[24px] mb-1 ${stat.textColor}`}
+                    className={`text-[20px] md:text-[24px] mb-1 ${stat.textColor}`}
                     style={{
                       fontFamily: "var(--font-montserrat)",
                       fontWeight: 900,
@@ -131,7 +131,7 @@ export default function StatsNarrativeSection() {
                   >
                     <CountUp target={stat.numeric} suffix={stat.suffix} />
                   </p>
-                  <p className="text-on-surface-variant uppercase text-[9px] tracking-tighter font-bold">
+                  <p className="text-on-surface-variant uppercase text-[8px] md:text-[9px] tracking-tighter font-bold">
                     {stat.label}
                   </p>
                 </div>
