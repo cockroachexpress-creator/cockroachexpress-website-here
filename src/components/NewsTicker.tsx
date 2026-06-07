@@ -5,7 +5,7 @@ export default async function NewsTicker() {
 
   if (headlines.length === 0) {
     return (
-      <div className="bg-surface-container-lowest py-2 border-b-2 border-secondary-container">
+      <div className="ticker-ticker py-2 border-b-2 border-surface-container-highest">
         <div className="ticker-wrap">
           <div className="ticker-move flex gap-8">
             <span className="text-secondary uppercase font-bold text-sm whitespace-nowrap">
@@ -20,7 +20,7 @@ export default async function NewsTicker() {
   const doubled = [...headlines, ...headlines];
 
   return (
-    <div className="bg-surface-container-lowest py-2 border-b-2 border-secondary-container">
+    <div className="ticker-ticker py-2 border-b-2 border-surface-container-highest">
       <div className="ticker-wrap">
         <div className="ticker-move flex gap-8">
           {doubled.map((headline, i) => (
