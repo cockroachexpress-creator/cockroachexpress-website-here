@@ -70,6 +70,14 @@ export default function HeroSection() {
             and the survivors of the status quo.
           </p>
           <button
+            onClick={() => {
+              const el = document.getElementById("trending");
+              if (el) {
+                const offset = 80;
+                const top = el.getBoundingClientRect().top + window.scrollY - offset;
+                window.scrollTo({ top, behavior: "smooth" });
+              }
+            }}
             className={`btn-ripple bg-secondary text-on-secondary px-8 py-4 uppercase font-bold text-sm brutalist-border brutalist-shadow-secondary flex items-center gap-2 hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all cursor-pointer ${
               mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
