@@ -17,6 +17,8 @@ export default function SmoothScroll({
 
     function raf(time: number) {
       lenis.raf(time);
+      // Dispatch custom event so other components (e.g. ScrollCockroach) can track scroll smoothly
+      window.dispatchEvent(new CustomEvent("lenis-scroll"));
       requestAnimationFrame(raf);
     }
 

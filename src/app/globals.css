@@ -433,3 +433,63 @@ body {
 .grayscale-themed {
   opacity: var(--grayscale-img-opacity);
 }
+
+/* ── Scroll Cockroach Progress Indicator ── */
+.scroll-cockroach-container {
+  position: fixed;
+  right: 14px;
+  top: 76px; /* just below navbar bottom */
+  bottom: 60px;
+  width: 52px;
+  z-index: 90; /* below grain overlay (z-100), above content */
+  pointer-events: none;
+}
+
+.scroll-cockroach-line {
+  position: absolute;
+  right: 22px; /* center under cockroach */
+  top: 0;
+  width: 3px;
+  background: linear-gradient(
+    to bottom,
+    rgba(220, 38, 38, 0.3),
+    rgba(220, 38, 38, 0.9)
+  );
+  border-radius: 2px;
+  transition: height 0.1s ease-out;
+}
+
+.scroll-cockroach-icon {
+  position: absolute;
+  right: 0;
+  width: 48px;
+  height: 60px;
+  filter: drop-shadow(0 0 8px rgba(220, 38, 38, 0.6));
+  transition: top 0.1s ease-out;
+  animation: cockroach-crawl 1.5s ease-in-out infinite;
+}
+
+@keyframes cockroach-crawl {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  15% { transform: translateY(-1px) rotate(4deg); }
+  30% { transform: translateY(0px) rotate(-2deg); }
+  50% { transform: translateY(-1.5px) rotate(3deg); }
+  70% { transform: translateY(0px) rotate(-4deg); }
+  85% { transform: translateY(-1px) rotate(2deg); }
+}
+
+/* Hide on small screens */
+@media (max-width: 768px) {
+  .scroll-cockroach-container {
+    display: none;
+  }
+}
+
+/* Dark mode: white line */
+.dark .scroll-cockroach-line {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.9)
+  );
+}

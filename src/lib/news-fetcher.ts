@@ -62,9 +62,9 @@ const FALLBACK_IMAGE = "https://lh3.googleusercontent.com/aida-public/AB6AXuBhQ8
 
 export async function deleteOldArticles(): Promise<number> {
   const collection = await getArticlesCollection();
-  const fourDaysAgo = new Date(Date.now() - 4 * 24 * 60 * 60 * 1000);
+  const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
   const result = await collection.deleteMany({
-    createdAt: { $lt: fourDaysAgo },
+    createdAt: { $lt: sevenDaysAgo },
     sourceUrl: { $ne: null },
   });
   return result.deletedCount;

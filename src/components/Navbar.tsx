@@ -64,7 +64,7 @@ export default function Navbar() {
           className="p-2 hover:bg-surface-container-highest transition-all active:translate-x-0.5 active:translate-y-0.5 cursor-pointer hover:scale-110"
           aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
         >
-          <span className="material-symbols-outlined text-tertiary">
+          <span className="material-symbols-outlined text-secondary">
             {theme === "dark" ? "light_mode" : "dark_mode"}
           </span>
         </button>
