@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const contactCards = [
@@ -72,15 +71,18 @@ export default function ContactSection() {
               </p>
             </div>
           </div>
-          <div className="scanline-hover lg:col-span-2 brutalist-border bg-surface-container-lowest overflow-hidden flex flex-col items-center justify-center p-12 text-center min-h-[400px] group">
-            <Image
-              alt="Google Drive"
-              className="h-6 mb-6 group-hover:scale-110 transition-transform duration-300"
-              width={80}
-              height={24}
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGAVajh-tRN8Si13mOBTItRadSGICgbrP7vLD8wc29cSsHs6FZJ3Dvko3xnsnIFW89Vr00q2l5v_8sxQbarZ33xOfL8LzrMTTgJ05YkD2Lq6wESsNgH_oG-M7OOgHIccjSO0xhmv39tCz6Kmv7di3bu2dtiyvDKs5qlmWqjjPtrzdVHsqL0FkLnN51PayFsuURqSERc3nQDzPvyuTL5gVSq_H64WWrDsQCy-fKRYli4tzXXte5FxbDLNGXhliP72a6g5o5sxLEEfU"
-              unoptimized
-            />
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScKfBc9c00arsdsPu6Tm0JChJfsu0x8ywhy0aCdc62znV7XvQ/alreadyresponded"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="scanline-hover lg:col-span-2 brutalist-border bg-surface-container-lowest overflow-hidden flex flex-col items-center justify-center p-12 text-center min-h-[400px] group cursor-pointer hover:border-tertiary transition-colors"
+          >
+            <span
+              className="material-symbols-outlined text-tertiary mb-6 group-hover:scale-125 transition-transform duration-300"
+              style={{ fontSize: "64px" }}
+            >
+              description
+            </span>
             <h3
               className="text-on-surface mb-2"
               style={{
@@ -90,21 +92,22 @@ export default function ContactSection() {
                 lineHeight: 1.3,
               }}
             >
-              We&apos;re sorry. You can&apos;t access this item because it is in
-              violation of our Terms of Service.
+              Got a scoop? A hot take? A conspiracy theory?
             </h3>
-            <p className="text-on-surface-variant mb-6">
-              Find out more{" "}
-              <a className="text-tertiary underline" href="#">
-                about this logic at the Google Drive Help Center
-              </a>
-              .
+            <p className="text-on-surface-variant mb-6 max-w-md">
+              Fill out our tip line form and we might just turn your chaos into
+              headlines.
             </p>
-            <div className="w-full h-1 bg-surface-container-highest mt-auto"></div>
-            <p className="text-[10px] text-outline-variant mt-4 uppercase font-bold tracking-[0.2em] group-hover:text-error transition-colors duration-500">
-              CENSORED BY THE ALGORITHM
+            <span className="px-8 py-3 bg-tertiary text-surface brutalist-border font-bold uppercase text-sm tracking-wider group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-200">
+              <span className="material-symbols-outlined align-middle mr-2 text-[16px]">
+                open_in_new
+              </span>
+              Submit Your Story
+            </span>
+            <p className="text-[10px] text-outline-variant mt-6 uppercase font-bold tracking-[0.2em] group-hover:text-tertiary transition-colors duration-500">
+              COCKROACH TIP LINE — POWERED BY GOOGLE FORMS
             </p>
-          </div>
+          </a>
         </div>
       </div>
     </section>
