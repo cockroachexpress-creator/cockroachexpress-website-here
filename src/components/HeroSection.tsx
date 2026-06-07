@@ -91,13 +91,15 @@ export default function HeroSection() {
         </div>
         <div className="hidden lg:block">
           <div className="hero-image-float bg-surface-container brutalist-border p-4 brutalist-shadow-tertiary">
-            <Image
-              alt="Cockroach Express reporter on the field"
-              className="w-full h-[450px] object-cover brutalist-border"
-              width={600}
-              height={450}
-              src="/website_reporter_frame.png"
-            />
+            <div className="relative w-full aspect-[4/3] overflow-hidden brutalist-border">
+              <Image
+                alt="Cockroach Express reporter on the field"
+                fill
+                className="object-cover"
+                src="/website_reporter_frame.png"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
             <div className="mt-4 text-center italic font-bold text-tertiary text-sm">
               &ldquo;They tried to step on us. We came back.&rdquo;
             </div>
