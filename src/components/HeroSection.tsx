@@ -17,7 +17,7 @@ export default function HeroSection() {
           alt="Gritty cinematic urban background"
           className="w-full h-full object-cover hero-bg-img"
           fill
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjyWNf-aazikKjzipv_fRn5ZM4egyChazAp83kurVphPdVxR0l0_OW5LktTHYBQ9iMpZSgmTLtvSyWWlYw60ANVLRL_NZKVtyntrn2eqhWusQ3okVpA_naH4UO8kUyXswiJt9yf0Y1bdRb6VGx5DMS8d5Zvz-eNbEfHdB1V-jRhRpxb67LoSH3OALkwn8AulrJCX5A7Fw5DG1Khwl-6ZbSD2LY1FVUXQuoecD8pxES1iwZnCS_q-1il_G-BrWoVkslMRvH5DDjZAM"
+          src="/herobackground.jpeg"
           unoptimized
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
