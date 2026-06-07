@@ -407,56 +407,56 @@ body {
 }
 
 /* ── Light mode enhancements ── */
-:root .brutalist-border {
+:root:not(.dark) .brutalist-border {
   border-color: var(--border-color);
 }
 
-:root header {
+:root:not(.dark) header {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   background-color: rgba(245, 243, 239, 0.88);
   border-bottom-color: var(--color-on-surface) !important;
 }
 
-:root footer {
+:root:not(.dark) footer {
   background-color: #1c1917 !important;
   border-top-color: var(--color-secondary) !important;
 }
-:root footer h2,
-:root footer h4 {
+:root:not(.dark) footer h2,
+:root:not(.dark) footer h4 {
   color: #ffb59d !important;
 }
-:root footer p,
-:root footer li,
-:root footer span {
+:root:not(.dark) footer p,
+:root:not(.dark) footer li,
+:root:not(.dark) footer span {
   color: #c8c6c5 !important;
 }
-:root footer a,
-:root footer button {
+:root:not(.dark) footer a,
+:root:not(.dark) footer button {
   color: #c8c6c5 !important;
 }
-:root footer a:hover,
-:root footer button:hover {
+:root:not(.dark) footer a:hover,
+:root:not(.dark) footer button:hover {
   color: #ffb59d !important;
 }
-:root footer .brutalist-border {
+:root:not(.dark) footer .brutalist-border {
   border-color: #44403c !important;
 }
-:root footer .brutalist-border:hover {
+:root:not(.dark) footer .brutalist-border:hover {
   border-color: #ffb59d !important;
 }
-:root footer svg {
+:root:not(.dark) footer svg {
   color: #c8c6c5 !important;
 }
-:root footer .brutalist-border:hover svg {
+:root:not(.dark) footer .brutalist-border:hover svg {
   color: #1c1917 !important;
 }
 
-:root .scanline-hover::after {
+:root:not(.dark) .scanline-hover::after {
   background: linear-gradient(90deg, transparent, rgba(0, 122, 56, 0.25), transparent);
 }
 
-:root .border-glow:hover {
+:root:not(.dark) .border-glow:hover {
   animation: glow-pulse-light 1.5s ease-in-out infinite;
 }
 @keyframes glow-pulse-light {
@@ -465,10 +465,10 @@ body {
 }
 
 /* Light mode news ticker */
-:root .ticker-ticker {
+:root:not(.dark) .ticker-ticker {
   background-color: #1c1917;
 }
-:root .ticker-ticker .ticker-move span {
+:root:not(.dark) .ticker-ticker .ticker-move span {
   color: #ffb59d;
 }
 .dark .ticker-ticker {
@@ -547,23 +547,23 @@ body {
   85% { transform: translateY(-1px) rotate(2deg); }
 }
 
-:root .brutalist-shadow-tertiary {
+:root:not(.dark) .brutalist-shadow-tertiary {
   box-shadow: 4px 4px 0px 0px var(--color-tertiary);
 }
 
-:root .brutalist-shadow-secondary {
+:root:not(.dark) .brutalist-shadow-secondary {
   box-shadow: 4px 4px 0px 0px var(--color-secondary);
 }
 
-:root .brutalist-shadow-tertiary-hover:hover {
+:root:not(.dark) .brutalist-shadow-tertiary-hover:hover {
   box-shadow: 6px 6px 0px 0px var(--color-tertiary);
 }
 
-:root .brutalist-shadow-secondary-hover:hover {
+:root:not(.dark) .brutalist-shadow-secondary-hover:hover {
   box-shadow: 6px 6px 0px 0px var(--color-secondary);
 }
 
-:root .brutalist-shadow-secondary-container-hover:hover {
+:root:not(.dark) .brutalist-shadow-secondary-container-hover:hover {
   box-shadow: 0 4px 0 0 var(--color-secondary);
 }
 
